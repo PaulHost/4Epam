@@ -52,6 +52,8 @@ public class Main {
 				break;
 			} else if (o.equals("%")) {
 				break;
+			}else{
+				System.out.println("только + , - , * , / или %");
 			}
 		}
 
@@ -62,7 +64,7 @@ public class Main {
 				break;
 			} catch (Exception e) {
 				// TODO: handle exception
-				System.out.println("только + , - , * , / ");
+				System.out.println("не число");
 			}
 		}
 
