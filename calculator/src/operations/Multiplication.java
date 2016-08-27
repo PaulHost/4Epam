@@ -10,7 +10,7 @@ public class Multiplication {
 		this.b = b;
 	}
 	public double get(){
-		
+		c = a * b;
 		return c;
 	}
 }
