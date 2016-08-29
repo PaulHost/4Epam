@@ -1,6 +1,6 @@
 package operations;
 
-public class Addition {
+public class Addition extends Operation{
 	// сложение
 	private double a;
 	private double b;

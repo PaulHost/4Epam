@@ -1,6 +1,6 @@
 package operations;
 
-public class Modulo {
+public class Modulo extends Operation{
 	// остаток от деления
 	private double a;
 	private double b;

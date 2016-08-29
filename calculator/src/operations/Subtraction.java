@@ -1,6 +1,6 @@
 package operations;
 
-public class Subtraction {
+public class Subtraction extends Operation{
 	//вычитание
 	private double a;
 	private double b;

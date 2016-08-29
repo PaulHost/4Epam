@@ -1,6 +1,6 @@
 package operations;
 
-public class Division {
+public class Division extends Operation{
 	//деление
 	private double a;
 	private double b;
