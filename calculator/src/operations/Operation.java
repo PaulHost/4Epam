@@ -1,11 +1,15 @@
 package operations;
 
 public abstract class Operation {
-	private double a;
-	private double b;
-	private double c;
+	
+	protected double a;
+	protected double b;
 
-	public double get() {
-		return c;
+	public Operation(double a, double b) {
+		// TODO Auto-generated constructor stub
+		this.a = a;
+		this.b = b;
 	}
+
+	public abstract double get();
 }

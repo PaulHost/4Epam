@@ -17,10 +17,11 @@ public class Main {
 		String operation;
 		double secondNumber;
 
-		StringBuffer help = new StringBuffer();
-		help.append("a + b	Сложение а и b ").append("\n").append("a – b	Вычитание b из а (также унарный минус)")
-				.append("\n").append("a * b	Умножение а на b").append("\n").append("a / b	Деление a на b")
-				.append("\n").append("a % b	Вычисление остатка от деления а на b (деление по модулю)").append("\n");
+		StringBuffer stringBuffer = new StringBuffer();
+		stringBuffer.append("a + b	Сложение а и b ").append("\n")
+				.append("a – b	Вычитание b из а (также унарный минус)").append("\n").append("a * b	Умножение а на b")
+				.append("\n").append("a / b	Деление a на b").append("\n")
+				.append("a % b	Вычисление остатка от деления а на b (деление по модулю)").append("\n");
 
 		Scanner scanner = new Scanner(System.in);
 
@@ -28,7 +29,7 @@ public class Main {
 			System.out.println("введите число или help:");
 			startingLine = scanner.nextLine();
 			if (startingLine.equalsIgnoreCase("help")) {
-				System.out.println(help.toString());
+				System.out.println(stringBuffer.toString());
 			} else {
 				try {
 					firstNumber = Double.parseDouble(startingLine);
@@ -52,7 +53,7 @@ public class Main {
 				break;
 			} else if (operation.equals("%")) {
 				break;
-			}else{
+			} else {
 				System.out.println("только + , - , * , / или %");
 			}
 		}

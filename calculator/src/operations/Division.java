@@ -1,16 +1,15 @@
 package operations;
 
-public class Division extends Operation{
-	//деление
+public class Division extends Operation {
+
 	private double a;
 	private double b;
-	private double c;
-	public Division(double a, double b){
-		this.a = a;
-		this.b = b;
+
+	public Division(double a, double b) {
+		super(a, b);
 	}
-	public double get(){
-		c = a / b;
-		return c;
+
+	public double get() {
+		return a / b;
 	}
 }
