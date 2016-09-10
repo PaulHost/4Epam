@@ -12,10 +12,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String aa;
-		double a;
-		String o;
-		double b;
+		String startingLine;
+		double firstNumber;
+		String operation;
+		double secondNumber;
 
 		StringBuffer help = new StringBuffer();
 		help.append("a + b	Сложение а и b ").append("\n").append("a – b	Вычитание b из а (также унарный минус)")
@@ -26,12 +26,12 @@ public class Main {
 
 		while (true) {
 			System.out.println("введите число или help:");
-			aa = scanner.nextLine();
-			if (aa.equalsIgnoreCase("help")) {
+			startingLine = scanner.nextLine();
+			if (startingLine.equalsIgnoreCase("help")) {
 				System.out.println(help.toString());
 			} else {
 				try {
-					a = Integer.parseInt(aa);
+					firstNumber = Double.parseDouble(startingLine);
 					break;
 				} catch (Exception e) {
 					// TODO: handle exception
@@ -41,16 +41,16 @@ public class Main {
 		}
 		while (true) {
 			System.out.println("введите действие:");
-			o = scanner.nextLine();
-			if (o.equals("+")) {
+			operation = scanner.nextLine();
+			if (operation.equals("+")) {
 				break;
-			} else if (o.equals("-")) {
+			} else if (operation.equals("-")) {
 				break;
-			} else if (o.equals("*")) {
+			} else if (operation.equals("*")) {
 				break;
-			} else if (o.equals("/")) {
+			} else if (operation.equals("/")) {
 				break;
-			} else if (o.equals("%")) {
+			} else if (operation.equals("%")) {
 				break;
 			}else{
 				System.out.println("только + , - , * , / или %");
@@ -60,7 +60,7 @@ public class Main {
 		while (true) {
 			System.out.println("введите последнее число:");
 			try {
-				b = scanner.nextDouble();
+				secondNumber = scanner.nextDouble();
 				break;
 			} catch (Exception e) {
 				// TODO: handle exception
@@ -69,16 +69,16 @@ public class Main {
 		}
 
 		System.out.println("Ваш ответ: ");
-		if (o.equals("+")) {
-			System.out.println(new Addition(a, b).get());
-		} else if (o.equals("-")) {
-			System.out.println(new Subtraction(a, b).get());
-		} else if (o.equals("*")) {
-			System.out.println(new Multiplication(a, b).get());
-		} else if (o.equals("/")) {
-			System.out.println(new Division(a, b).get());
-		} else if (o.equals("%")) {
-			System.out.println(new Modulo(a, b).get());
+		if (operation.equals("+")) {
+			System.out.println(new Addition(firstNumber, secondNumber).get());
+		} else if (operation.equals("-")) {
+			System.out.println(new Subtraction(firstNumber, secondNumber).get());
+		} else if (operation.equals("*")) {
+			System.out.println(new Multiplication(firstNumber, secondNumber).get());
+		} else if (operation.equals("/")) {
+			System.out.println(new Division(firstNumber, secondNumber).get());
+		} else if (operation.equals("%")) {
+			System.out.println(new Modulo(firstNumber, secondNumber).get());
 		}
 
 	}
