@@ -7,6 +7,10 @@ public class Modulo extends Operation {
 	}
 
 	public double get() {
-		return a % b;
+		if (a == 0 && b == 0) {
+			return 0.0;
+		} else {
+			return a % b;
+		}
 	}
 }
